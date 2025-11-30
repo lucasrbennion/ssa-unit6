@@ -141,10 +141,10 @@ The terminal output has been captured as evidence in the "Unit 6 - Individual Pr
 ## **9. Repository Structure**
 
 ```
-model.py
-experiment.py
-main.py
-tests.py
-README.md
+model.py (Defines the core simulation components, including devices, the controller and the network layer)
+experiment.py (Runs the simulation by generating traffic, recording results and producing summary metrics)
+main.py (Provides the command-line interface to execute experiments and optionally export results)
+tests.py (Contains basic automated tests to verify authentication, authorisation, networking and experiment behaviour)
+README.md (this document which explains what the project is, how it works and how to run it)
 outputs/    (testing output in the CVS)
 ```
