@@ -72,7 +72,7 @@ The experiment compares two operational modes:
 
 ## **5. Summary of Results**
 
-Refer the Testing Results summary word file "Testing Resuls.docx"
+Refer the Testing Results summary word file "Unit 6 - Individual Project Code Development - Testing Results - Lucas Bennion.docx"
 
 ---
 
@@ -125,7 +125,7 @@ python main.py --mode secure --output secure_results.csv
 python tests.py
 ```
 
-The terminal output has been captured as evidence in the "Testing Resuls.docx"
+The terminal output has been captured as evidence in the "Unit 6 - Individual Project Code Development - Testing Results - Lucas Bennion.docx"
 
 ---
 
