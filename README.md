@@ -8,7 +8,7 @@
 
 This prototype models a simplified smart-warehouse Internet of Things (IoT) environment to investigate security and reliability trade-offs in distributed systems. The simulation focuses on comparing a **weak security configuration** (shared credentials and minimal checks) with a **stronger configuration** that uses **per-device authentication** and **role-based access control (RBAC)**. The code demonstrates the interactions between a client device and a controller, incorporates elements such as latency and message loss and evaluates how these differences affect the system’s vulnerability to unauthorised actions.
 
-The work builds on the vulnerabilities identified in Part 1 of the assessment (e.g., weak credentials, rogue-device spoofing and over-privileged applications). The simulation provides quantitative evidence to address the chosen hypothesis and highlights how improved security controls change system behaviour.
+The work builds on the vulnerabilities identified in Unit 3 (e.g., weak credentials, rogue-device spoofing and over-privileged applications). The simulation provides quantitative evidence to address the chosen hypothesis and highlights how improved security controls change system behaviour.
 
 ---
 
@@ -29,9 +29,7 @@ The prototype simulates three main components:
 * **Device (legitimate):** A registered IoT component such as a sensor, viewer or robot. Devices can send permitted actions using their assigned roles and, in secure mode, an API key.
 * **RogueDevice:** An unregistered or spoofed client attempting privileged actions such as `shutdown`. It challenges the system’s authentication and authorisation controls.
 * **Controller (Hub):** Authenticates devices and enforces RBAC in secure mode. In weak mode, it only checks device identifiers and may accept unauthorised messages, reflecting insecure real-world deployments.
-* **NetworkSimulator:** Introduces random latency and message loss to replicate common distributed-system challenges.
-
-All interactions flow through the network layer, enabling experiments that measure the effect of both environmental noise and security configuration on message acceptance and latency.
+* **NetworkSimulator:** Introduces random latency and message loss to replicate common distributed-system challenges and interactions flow through the network layer. 
 
 ---
 
@@ -74,22 +72,7 @@ The experiment compares two operational modes:
 
 ## **5. Summary of Results**
 
-(Insert your actual numbers after running `main.py`.)
-
-Typical observed behaviour:
-
-* **Weak Mode:**
-
-  * A significant proportion of rogue messages are accepted due to insufficient authentication.
-  * Latency is slightly lower as no additional security checks run.
-
-* **Secure Mode:**
-
-  * Rogue commands are almost entirely rejected.
-  * Legitimate messages succeed consistently.
-  * Latency increases slightly (due to API key verification and RBAC checks), but remains low enough not to compromise system availability.
-
-The results support the hypothesis that stronger authentication and RBAC drastically reduce unauthorised access with only minor performance impact.
+Refer the Testing Results summary word file "Testing Resuls.docx"
 
 ---
 
@@ -142,7 +125,7 @@ python main.py --mode secure --output secure_results.csv
 python tests.py
 ```
 
-The terminal output from these runs should be captured as evidence for your submission.
+The terminal output has been captured as evidence in the "Testing Resuls.docx"
 
 ---
 
@@ -163,5 +146,5 @@ experiment.py
 main.py
 tests.py
 README.md
-outputs/    (optional CSV results)
+outputs/    (testing output in the CVS)
 ```
